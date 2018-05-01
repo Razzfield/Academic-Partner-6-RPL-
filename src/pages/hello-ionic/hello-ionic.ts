@@ -17,7 +17,7 @@ export class HelloIonicPage {
   }
 
   gotoNewJobPage(){
-    this.navCtrl.push(NewJobPage);
+    this.navCtrl.setRoot(NewJobPage);
   }
 
   gotoNewReg(){

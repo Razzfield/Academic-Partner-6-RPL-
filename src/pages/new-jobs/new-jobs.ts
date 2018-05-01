@@ -19,7 +19,7 @@ export class NewJobsPage {
   showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Sukses!',
-      subTitle: 'Selamat, Sign-up Berhasil!, Silahkan login.',
+      subTitle: 'Selamat, Sign-up Anda Berhasil!, Silahkan login.',
       buttons: ['Okay']
     });
     alert.present();

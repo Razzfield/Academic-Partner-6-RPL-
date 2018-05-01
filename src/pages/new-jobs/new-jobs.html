@@ -17,29 +17,41 @@
   <ion-list>
 
     <ion-item>
-      <ion-label fixed>Email</ion-label>
+      <ion-label floating>Email</ion-label>
       <ion-input [(ngModel)]="email" type="text" value=""></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-label fixed>Password</ion-label>
+      <ion-label floating>Password</ion-label>
       <ion-input [(ngModel)]="password" type="password"></ion-input>
     </ion-item>
     
     <ion-item>
-      <ion-label fixed>Nama</ion-label>
+      <ion-label floating>Nama</ion-label>
       <ion-input [(ngModel)]="nama" type="text" value=""></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label fixed>NIM</ion-label>
+      <ion-label floating>NIM</ion-label>
       <ion-input [(ngModel)]="nim" type="text" value=""></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Tanggal Lahir</ion-label>
+      <ion-label floating>Tanggal Lahir</ion-label>
       <ion-datetime displayFormat="DD/M/YYYY" [(ngModel)]="date" yearValue="1990"></ion-datetime>
     </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Kategori User</ion-label>
+        <ion-select [(ngModel)]="kategori">
+          <ion-option value="alumni">Alumni</ion-option>
+          <ion-option value="mahasiswa">Mahasiswa</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    
+
 
     <button ion-button block (click)="showAlert()" (click)="createNewJob()" color="green"> Create</button>
 
