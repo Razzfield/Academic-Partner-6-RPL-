@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+
 .page-hello-ionic {
     background-image: url('../assets/imgs/background.jpg');
     vertical-align: middle;
@@ -5,8 +11,16 @@
 
 .judul {
     font-size: 25px;
+    color:white; 
+
 }
 
 .my-menu {
     background-color: transparent;
     }
+
+.caption{
+    font-size: 18px;
+    color: white;
+    margin: 0 auto;    
+}

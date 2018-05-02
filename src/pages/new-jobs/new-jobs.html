@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title text-center>Register Here</ion-title>
+    <ion-title>Register Here</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -40,7 +40,7 @@
       <ion-label floating>Tanggal Lahir</ion-label>
       <ion-datetime displayFormat="DD/M/YYYY" [(ngModel)]="date" yearValue="1990"></ion-datetime>
     </ion-item>
-
+    <br>
     <ion-list>
       <ion-item>
         <ion-label floating>Kategori User</ion-label>
@@ -53,7 +53,7 @@
     
 
 
-    <button ion-button block (click)="showAlert()" (click)="createNewJob()" color="green"> Create</button>
+    <button ion-button full (click)="showAlert();createNewJob()" color="green"> Create Account</button>
 
   </ion-list>
 </ion-content>
