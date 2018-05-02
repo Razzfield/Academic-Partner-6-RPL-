@@ -7,17 +7,17 @@
 
     <ion-item class="my-menu">
       <ion-label floating>Email</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="Email" type="text" style="color: white"></ion-input>
     </ion-item>
   
     <ion-item class="my-menu">
       <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input [(ngModel)]="password" type="password" style="color: white"></ion-input>
     </ion-item>
   
   </ion-list>
 
-  <button ion-button block (click)="gotoNewJobPage()" float-right>Login</button>
+  <button ion-button block (click)="gotoNewJobPage()">Login</button>
 
   <br><br>
   <p align="center" class ="caption">Tidak Punya Akun ? Silahkan Buat dulu <a (click)="gotoNewReg()">disini</a>.</p>

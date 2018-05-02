@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NewJobPage } from '../pages/new-job/new-job';
 import { NewJobsPage } from '../pages/new-jobs/new-jobs';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NewJobsPage } from '../pages/new-jobs/new-jobs';
     ItemDetailsPage,
     ListPage,
     NewJobPage,
-    NewJobsPage
+    NewJobsPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { NewJobsPage } from '../pages/new-jobs/new-jobs';
     ItemDetailsPage,
     ListPage,
     NewJobPage,
-    NewJobsPage
+    NewJobsPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
