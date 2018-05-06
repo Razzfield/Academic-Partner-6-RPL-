@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-
 @Component({
-  selector: 'page-new-job',
-  templateUrl: 'new-job.html',
+  selector: 'page-mainmenu',
+  templateUrl: 'mainmenu.html',
 })
-export class NewJobPage {
+export class MainmenuPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewJobPage');
+    console.log('ionViewDidLoad MainmenuPage');
   }
 
 }

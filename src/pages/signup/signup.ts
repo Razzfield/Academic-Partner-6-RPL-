@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
-import { HelloIonicPage } from '../hello-ionic/hello-ionic';
-
+import { LoginPage } from '../login/login';
 
 @Component({
-  selector: 'page-new-jobs',
-  templateUrl: 'new-jobs.html',
+  selector: 'page-signup',
+  templateUrl: 'signup.html',
 })
-export class NewJobsPage {
+export class SignupPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl:AlertController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewJobsPage');
+    console.log('ionViewDidLoad SignupPage');
   }
 
   showAlert() {
@@ -24,9 +23,7 @@ export class NewJobsPage {
     });
     alert.present();
   }
-
-  createNewJob(){
-    this.navCtrl.setRoot(HelloIonicPage);
+  doneRegist(){
+    this.navCtrl.setRoot(LoginPage);
   }
-
 }

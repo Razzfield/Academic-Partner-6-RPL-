@@ -3,26 +3,27 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { NewJobPage } from '../pages/new-job/new-job';
-import { NewJobsPage } from '../pages/new-jobs/new-jobs';
 import { ProfilePage } from '../pages/profile/profile';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+import { MainmenuPage } from '../pages/mainmenu/mainmenu';
 
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
+    LoginPage,
     ItemDetailsPage,
     ListPage,
-    NewJobPage,
-    NewJobsPage,
-    ProfilePage
+    ProfilePage,
+    SignupPage,
+    MainmenuPage
   ],
   imports: [
     BrowserModule,
@@ -31,12 +32,12 @@ import { ProfilePage } from '../pages/profile/profile';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
+    LoginPage,
     ItemDetailsPage,
     ListPage,
-    NewJobPage,
-    NewJobsPage,
-    ProfilePage
+    ProfilePage,
+    SignupPage,
+    MainmenuPage
   ],
   providers: [
     StatusBar,
