@@ -1,0 +1,67 @@
+<!--
+  Generated template for the EditprofilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sunting Profile Anda</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form #formCtrl="ngForm">
+        <div align="center" *ngIf="formCtrl.form.valid">
+            
+          <h2>Foto anda</h2>
+          <img class="profile-image" src="assets/imgs/profile.jpg">
+
+        </div>
+    <ion-list>
+        <ion-item>
+          <ion-label floating>Nama</ion-label>
+          <ion-input [(ngModel)]="name" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>NIM</ion-label>
+            <ion-input [(ngModel)]="nim" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Departemen</ion-label>
+            <ion-input [(ngModel)]="departemen" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Angkatan</ion-label>
+            <ion-input [(ngModel)]="angkatan" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+       
+        <ion-item>
+            <ion-label inline>Company</ion-label>
+            <ion-select [(ngModel)]="company" [ngModelOptions]="{standalone: true}">
+              <ion-option value="1">opsi 1</ion-option>
+              <ion-option value="2">opsi 2</ion-option>
+            </ion-select>
+          </ion-item>
+        <ion-item>
+            <ion-label floating>ID Line</ion-label>
+            <p>@<ion-input [(ngModel)]="minat" [ngModelOptions]="{standalone: true}"></ion-input>
+            </p>
+        </ion-item>
+        
+
+        <ion-item>
+            <ion-label >Birth Date</ion-label>
+            <ion-datetime name="birthdate" displayFormat="DD MM YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}" placeholder="click here"></ion-datetime>
+        </ion-item>
+        
+      </ion-list>
+        
+      <button full color="secondary" ion-button (click)="save();notif()">Simpan</button>
+    </form>
+
+
+</ion-content>
