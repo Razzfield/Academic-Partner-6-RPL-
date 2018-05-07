@@ -15,6 +15,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { MainmenuPage } from '../pages/mainmenu/mainmenu';
 import { EditprofilePage } from '../pages/editprofile/editprofile';
+import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EditprofilePage } from '../pages/editprofile/editprofile';
     ProfilePage,
     SignupPage,
     MainmenuPage,
-    EditprofilePage
+    EditprofilePage,
+    SearchrekanPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { EditprofilePage } from '../pages/editprofile/editprofile';
     ProfilePage,
     SignupPage,
     MainmenuPage,
-    EditprofilePage
+    EditprofilePage,
+    SearchrekanPage
   ],
   providers: [
     StatusBar,

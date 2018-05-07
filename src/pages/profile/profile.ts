@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { EditprofilePage } from '../editprofile/editprofile';
+import { SearchrekanPage } from '../searchrekan/searchrekan';
 
 @Component({
   selector: 'page-profile',
@@ -49,5 +50,7 @@ export class ProfilePage {
     this.navCtrl.push(EditprofilePage)
   }
 
-
+  findPartner(){
+    this.navCtrl.push(SearchrekanPage)
+  }
 }

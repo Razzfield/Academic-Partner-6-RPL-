@@ -24,38 +24,36 @@
     <ion-list>
         <ion-item>
           <ion-label floating>Nama</ion-label>
-          <ion-input [(ngModel)]="name" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-input [(ngModel)]="name" [ngModelOptions]="{standalone: true}" required></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>NIM</ion-label>
-            <ion-input [(ngModel)]="nim" [ngModelOptions]="{standalone: true}"></ion-input>
+            <ion-input [(ngModel)]="nim" [ngModelOptions]="{standalone: true}" required></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Departemen</ion-label>
-            <ion-input [(ngModel)]="departemen" [ngModelOptions]="{standalone: true}"></ion-input>
+            <ion-input [(ngModel)]="departemen" [ngModelOptions]="{standalone: true}" required></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Angkatan</ion-label>
-            <ion-input [(ngModel)]="angkatan" [ngModelOptions]="{standalone: true}"></ion-input>
+            <ion-input [(ngModel)]="angkatan" [ngModelOptions]="{standalone: true}" required></ion-input>
         </ion-item>
        
         <ion-item>
-            <ion-label inline>Company</ion-label>
-            <ion-select [(ngModel)]="company" [ngModelOptions]="{standalone: true}">
-              <ion-option value="1">opsi 1</ion-option>
-              <ion-option value="2">opsi 2</ion-option>
-            </ion-select>
+            <ion-label floating>Minat</ion-label>
+            <ion-input [(ngModel)]="company" [ngModelOptions]="{standalone: true}" required>
+            </ion-input>
           </ion-item>
         <ion-item>
             <ion-label floating>ID Line</ion-label>
-            <p>@<ion-input [(ngModel)]="minat" [ngModelOptions]="{standalone: true}"></ion-input>
+            <p>@<ion-input [(ngModel)]="minat" [ngModelOptions]="{standalone: true}" required></ion-input>
             </p>
         </ion-item>
         
 
         <ion-item>
-            <ion-label >Birth Date</ion-label>
-            <ion-datetime name="birthdate" displayFormat="DD MM YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}" placeholder="click here"></ion-datetime>
+            <ion-label fixed>Birth Date</ion-label>
+            <ion-datetime required name="birthdate" displayFormat="DD MM YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}" placeholder="click here"></ion-datetime>
         </ion-item>
         
       </ion-list>
