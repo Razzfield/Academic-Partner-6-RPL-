@@ -1,9 +1,8 @@
 
 <ion-content padding center text-center class="page-login">
-  <a align="center" class="judul" style="font-size: 36px">Welcome to<br>
-    <a class ="judul"><strong>AcademicPartners</strong></a></a>
+  <img src="../assets/imgs/wt.png" style="margin-top:20%;">
 
-  <ion-list style="margin: 15% 0;">  
+  <ion-list style="margin-bottom: 15%;">  
       
       <ion-item  class="my-menu">
       <ion-label floating>Email</ion-label>
@@ -18,11 +17,16 @@
       
       </ion-list>
 
-  <button ion-button block (click)="logIn()" style="margin-top: 20%;">Login as Mahasiswa</button>
-  <button ion-button block (click)="logIn()" style="margin-top: 5%;background-color: green">Login as Alumni</button>
+  <button ion-button block (click)="logIn()" style="margin-top: 10%;" text-justify>
+    <ion-icon name="ios-people"></ion-icon>
+    &nbsp;Login as Mahasiswa
+  </button>
+  <button ion-button block (click)="logIn()" style="margin-top: 5%;background-color: green">
+      <ion-icon name="ios-school"></ion-icon>
+    &nbsp;Login as Alumni
+  </button>
   
-
-  <p style="margin-top: 10%" class ="caption">Tidak Punya Akun ? Klik <a (click)="signUp()">disini</a>.</p>
+  <p style="margin-top: 5%" class ="caption">Tidak Punya Akun ? Daftar <a (click)="signUp()">disini</a>.</p>
 
 
 </ion-content>
