@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-searchrekan',
@@ -8,7 +8,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class SearchrekanPage {
   items;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
     this.initializeItems();
   }
 
@@ -34,5 +34,17 @@ export class SearchrekanPage {
       })
     }
   }
+
+  presentModal() {
+    let modal = this.modalCtrl.create(SearchrekanPage);
+    modal.present();
+  }
+  
+  openModal(characterNum) {
+
+    let modal = this.modalCtrl.create(SearchrekanPage, characterNum);
+    modal.present();
+  }
 }
+
 

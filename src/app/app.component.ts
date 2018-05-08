@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
+import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make LoginPage the root (or first) page
-  rootPage = LoginPage;
+  rootPage = SearchrekanPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
