@@ -8,6 +8,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
 import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
+import { EditprofilePage } from '../pages/editprofile/editprofile';
 
 
 @Component({
@@ -31,7 +32,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Profile', component: ProfilePage },
-      { title: 'My First List', component: ListPage },
+      { title: 'Forum Alumni', component: ListPage },
       { title: 'Logout', component: LoginPage },
       
     ];
@@ -51,5 +52,11 @@ export class MyApp {
     this.menu.close();
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
+  }
+
+  editProfile(){
+    
+    this.menu.close();
+    this.nav.push(EditprofilePage);
   }
 }
