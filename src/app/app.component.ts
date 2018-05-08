@@ -9,6 +9,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
 import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 import { EditprofilePage } from '../pages/editprofile/editprofile';
+import { MainmenuPage } from '../pages/mainmenu/mainmenu';
 
 
 @Component({
@@ -31,6 +32,7 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
+      { title: 'Main Menu', component: MainmenuPage },
       { title: 'Profile', component: ProfilePage },
       { title: 'Forum Alumni', component: ListPage },
       { title: 'Logout', component: LoginPage },
