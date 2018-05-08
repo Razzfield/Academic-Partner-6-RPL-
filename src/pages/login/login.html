@@ -3,24 +3,26 @@
   <a align="center" class="judul" style="font-size: 36px">Welcome to<br>
     <a class ="judul"><strong>AcademicPartners</strong></a></a>
 
-  <ion-list>
-
-    <ion-item class="my-menu">
+  <ion-list style="margin: 15% 0;">  
+      
+      <ion-item  class="my-menu">
       <ion-label floating>Email</ion-label>
-      <ion-input [(ngModel)]="Email" type="text" style="color: white"></ion-input>
-    </ion-item>
-  
-    <ion-item class="my-menu">
+      <ion-input type="email"></ion-input>
+      </ion-item>
+      
+      <ion-item  class="my-menu">
       <ion-label floating>Password</ion-label>
-      <ion-input [(ngModel)]="password" type="password" style="color: white"></ion-input>
-    </ion-item>
+      <ion-input type="password"></ion-input>
+      </ion-item>
+
+      
+      </ion-list>
+
+  <button ion-button block (click)="logIn()" style="margin-top: 20%;">Login as Mahasiswa</button>
+  <button ion-button block (click)="logIn()" style="margin-top: 5%;background-color: green">Login as Alumni</button>
   
-  </ion-list>
 
-  <button ion-button block (click)="logIn()" style="margin-top: 20px;">Login</button>
-
-  <br><br>
-  <p style="margin-top: 20px;" class ="caption">Tidak Punya Akun ? Silahkan Buat dulu <a (click)="signUp()">disini</a>.</p>
+  <p style="margin-top: 10%" class ="caption">Tidak Punya Akun ? Klik <a (click)="signUp()">disini</a>.</p>
 
 
 </ion-content>
