@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { MainmenuPage } from '../mainmenu/mainmenu';
 
@@ -12,13 +12,24 @@ export class LoginPage {
   username : string;
   password : string;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
   }
 
  
-  logIn(){
+   
+  
+
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Mohon tunggu... internet anda jelek",
+      duration: 600
+    });
+    loader.present();
+
+    setTimeout(() => {
     this.navCtrl.setRoot(MainmenuPage);
-  }
+  }, 660);
+}
 
   signUp(){
     this.navCtrl.push(SignupPage);
