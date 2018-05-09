@@ -34,6 +34,7 @@ export class MyApp {
     this.pages = [
       { title: 'Main Menu', component: MainmenuPage },
       { title: 'Profile', component: ProfilePage },
+      { title: 'Daftar Rekan', component : SearchrekanPage},
       { title: 'Forum Alumni', component: ListPage },
       { title: 'Logout', component: LoginPage },
       

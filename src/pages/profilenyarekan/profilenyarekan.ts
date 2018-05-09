@@ -15,6 +15,6 @@ export class ProfilenyarekanPage {
   }
 
   closeModal(){
-    this.navView.dismiss();
+    this.navCtrl.pop();
   }
 }

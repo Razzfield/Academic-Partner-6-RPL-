@@ -37,8 +37,7 @@ export class SearchrekanPage {
   }
 
   openModal(){
-    const myModal = this.modalCtrl.create(ProfilenyarekanPage);
-    myModal.present();
+    this.navCtrl.push(ProfilenyarekanPage);
   }
 }
 
