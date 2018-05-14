@@ -21,6 +21,7 @@ export class LoginPage {
 
   presentLoading() {
     let loader = this.loadingCtrl.create({
+      spinner: 'bubbles',
       content: "Mohon tunggu... internet anda jelek",
       duration: 600
     });

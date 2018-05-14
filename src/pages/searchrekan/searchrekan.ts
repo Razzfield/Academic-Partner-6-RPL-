@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { ProfilenyarekanPage } from '../profilenyarekan/profilenyarekan';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProfilenyarekanPage } from '../profilenyarekan/profilenyarekan';
 export class SearchrekanPage {
   items;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController) {
     this.initializeItems();
   }
 
@@ -39,5 +39,13 @@ export class SearchrekanPage {
   openModal(){
     this.navCtrl.push(ProfilenyarekanPage);
   }
-}
 
+
+iseng() {
+  let alert = this.alertCtrl.create({
+    subTitle: 'Gak mau',
+    buttons: ['yah..']
+  });
+  alert.present();
+}
+}

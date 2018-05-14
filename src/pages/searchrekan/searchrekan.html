@@ -32,7 +32,7 @@
 
   <ion-list>
       <ion-item *ngFor="let item of items">
-      {{ item }}<button ion-button clear float-right ><a (click)="openModal()">Lihat Profile</a></button>
+      {{ item }}<button ion-button float-right outline (click)="openModal()">Lihat Profile</button>
       </ion-item>
     </ion-list>
 
@@ -52,5 +52,5 @@
     -->
   
 
-  <button ion-button block float-center color="secondary"> Tambah rekan baru!</button>
+  <button ion-button block float-center color="secondary" (click)="iseng()"> Tambah rekan baru!</button>
 </ion-content>
