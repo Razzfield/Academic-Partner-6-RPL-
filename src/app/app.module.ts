@@ -17,6 +17,7 @@ import { MainmenuPage } from '../pages/mainmenu/mainmenu';
 import { EditprofilePage } from '../pages/editprofile/editprofile';
 import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 import { ProfilenyarekanPage } from '../pages/profilenyarekan/profilenyarekan';
+import { ViewmemberPage } from '../pages/viewmember/viewmember';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProfilenyarekanPage } from '../pages/profilenyarekan/profilenyarekan';
     MainmenuPage,
     EditprofilePage,
     SearchrekanPage,
-    ProfilenyarekanPage
+    ProfilenyarekanPage,
+    ViewmemberPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { ProfilenyarekanPage } from '../pages/profilenyarekan/profilenyarekan';
     MainmenuPage,
     EditprofilePage,
     SearchrekanPage,
-    ProfilenyarekanPage
+    ProfilenyarekanPage,
+    ViewmemberPage
   ],
   providers: [
     StatusBar,

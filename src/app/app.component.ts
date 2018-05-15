@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { Platform, MenuController, Nav } from 'ionic-angular';
+import { Platform, MenuController, Nav, AlertController } from 'ionic-angular';
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,7 +26,8 @@ export class MyApp {
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    public alertCtrl: AlertController
   ) {
     this.initializeApp();
 
@@ -54,9 +55,34 @@ export class MyApp {
     // close the menu when clicking a link from the menu
     this.menu.close();
     // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+    if(page.component==LoginPage){
+      let confirm = this.alertCtrl.create({
+        title: 'Tunggu dulu..',
+        message: 'Apakah anda yakin ingin logout ?',
+        buttons: [
+          {
+            text: 'Tidak',
+            cssClass: 'test',
+            handler: () => {
+              console.log('No clicked');
+            }
+          },
+          {
+            text: 'Iya',
+            
+            handler: () => {
+              this.nav.setRoot(page.component);   
+              console.log('Yes clicked');
+            }
+          }
+        ]
+      });
+      confirm.present();
+    }
+    else{
+      this.nav.setRoot(page.component);
+    }
   }
-
   editProfile(){
     
     this.menu.close();

@@ -23,13 +23,13 @@ export class LoginPage {
     let loader = this.loadingCtrl.create({
       spinner: 'bubbles',
       content: "Mohon tunggu... internet anda jelek",
-      duration: 600
+      duration: 1200
     });
     loader.present();
 
     setTimeout(() => {
     this.navCtrl.setRoot(MainmenuPage);
-  }, 660);
+  }, 1260);
 }
 
   signUp(){

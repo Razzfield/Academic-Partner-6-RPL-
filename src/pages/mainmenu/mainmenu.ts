@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ViewmemberPage } from '../viewmember/viewmember';
 
 @Component({
   selector: 'page-mainmenu',
@@ -14,4 +15,7 @@ export class MainmenuPage {
     console.log('ionViewDidLoad MainmenuPage');
   }
 
+  lihat(){
+    this.navCtrl.push(ViewmemberPage);
+  }
 }
