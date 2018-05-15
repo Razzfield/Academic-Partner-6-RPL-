@@ -18,8 +18,12 @@
         <div align="center" *ngIf="formCtrl.form.valid">
             
           <h4>Foto anda</h4>
-          <img class="profile-image" src="assets/imgs/profile.jpg">
-
+          <img class="profile-image" src="assets/imgs/logo.jpg">
+          <ion-item>
+            <ion-input type="file" [id]="pic"></ion-input>
+          </ion-item>
+          
+          
         </div>
     <ion-list>
         <ion-item>
@@ -46,11 +50,9 @@
           </ion-item>
         <ion-item>
             <ion-label floating>ID Line</ion-label>
-            <p>@<ion-input [(ngModel)]="minat" [ngModelOptions]="{standalone: true}" required></ion-input>
-            </p>
-        </ion-item>
-        
-
+            <ion-input [(ngModel)]="minat" [ngModelOptions]="{standalone: true}" required></ion-input>
+          </ion-item>
+        <br>
         <ion-item>
             <ion-label fixed>Birth Date</ion-label>
             <ion-datetime required name="birthdate" displayFormat="DD MM YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}" placeholder="click here"></ion-datetime>

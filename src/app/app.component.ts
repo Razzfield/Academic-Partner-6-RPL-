@@ -88,4 +88,5 @@ export class MyApp {
     this.menu.close();
     this.nav.push(EditprofilePage);
   }
+  
 }

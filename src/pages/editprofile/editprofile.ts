@@ -33,4 +33,7 @@ export class EditprofilePage {
     });
     alert.present();
   }
+  input(){
+    
+  }
 }
