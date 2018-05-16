@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { MainmenuPage } from '../mainmenu/mainmenu';
+import { SignupOpsiPage } from '../signup-opsi/signup-opsi';
 
 @Component({
   selector: 'page-login',
@@ -33,7 +34,7 @@ export class LoginPage {
 }
 
   signUp(){
-    this.navCtrl.push(SignupPage);
+    this.navCtrl.push(SignupOpsiPage);
   }
 }
 
