@@ -15,6 +15,7 @@
           $email = $request->email;
           $password = $request->password;
           $nama_lengkap = $request->nama_lengkap;
+          $tanggal_lahir = $request->tanggal_lahir;
           $id_line = $request->id_line;
           $nomor_hp = $request->nomor_hp;
           $nim = $request->nim;
@@ -23,10 +24,10 @@
           $angkatan = $request->angkatan;
       }
       $encrypt_password = md5($password);
-      $sql = mysqli_query($conn,"INSERT INTO user (email,password,nama_lengkap, id_line, nomor_hp, nim, jurusan, fakultas, angkatan)
-      VALUES ('$email','$encrypt_password','$nama_lengkap','$id_line', '$nomor_hp','$nim','$jurusan','$fakultas','$angkatan')");
+      $sql = mysqli_query($conn,"INSERT INTO user_mahasiswa (email,password,nama_lengkap,tanggal_lahir, id_line, nomor_hp, nim, jurusan, fakultas, angkatan)
+      VALUES ('$email','$encrypt_password','$nama_lengkap','$tanggal_lahir','$id_line','$nomor_hp','$nim','$jurusan','$fakultas','$angkatan')");
   if($sql){
-      $getUserSql=mysqli_query($conn, "SELECT * from user WHERE username='$username' AND password = '$encrypt_password'");
+      $getUserSql=mysqli_query($conn, "SELECT * from user_mahasiswa WHERE username='$username' AND password = '$encrypt_password'");
       if (mysqli_num_rows($getUserSql)) {
         $row = mysqli_fetch_assoc($getUserSql);
         $data =array(
