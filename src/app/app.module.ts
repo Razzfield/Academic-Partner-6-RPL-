@@ -19,6 +19,7 @@ import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 import { ProfilenyarekanPage } from '../pages/profilenyarekan/profilenyarekan';
 import { ViewmemberPage } from '../pages/viewmember/viewmember';
 import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
+import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
     EditprofilePage,
     SearchrekanPage,
     ProfilenyarekanPage,
-    ViewmemberPage
+    ViewmemberPage,
+    FriendPopoverPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
     EditprofilePage,
     SearchrekanPage,
     ProfilenyarekanPage,
-    ViewmemberPage
+    ViewmemberPage,
+    FriendPopoverPage
   ],
   providers: [
     StatusBar,

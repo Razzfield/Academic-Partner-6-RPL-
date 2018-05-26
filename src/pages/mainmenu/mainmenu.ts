@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { ViewmemberPage } from '../viewmember/viewmember';
+import { FriendPopoverPage } from '../friend-popover/friend-popover';
 
 @Component({
   selector: 'page-mainmenu',
@@ -8,7 +9,7 @@ import { ViewmemberPage } from '../viewmember/viewmember';
 })
 export class MainmenuPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
   }
 
   ionViewDidLoad() {
@@ -18,4 +19,12 @@ export class MainmenuPage {
   lihat(){
     this.navCtrl.push(ViewmemberPage);
   }
+  
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(FriendPopoverPage);
+    popover.present({
+      ev: myEvent
+    });
+  }
 }
+
