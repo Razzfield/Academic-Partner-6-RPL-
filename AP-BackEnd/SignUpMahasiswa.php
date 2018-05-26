@@ -4,6 +4,7 @@
         $email="";
         $password="";  
         $nama_lengkap="";
+        $tanggal_lahir="";
         $id_line="";
         $nomor_hp="";
         $nim="";

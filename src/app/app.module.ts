@@ -19,7 +19,6 @@ import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 import { ProfilenyarekanPage } from '../pages/profilenyarekan/profilenyarekan';
 import { ViewmemberPage } from '../pages/viewmember/viewmember';
 import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
-import { SignupOpsiPage } from '../pages/signup-opsi/signup-opsi';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { SignupOpsiPage } from '../pages/signup-opsi/signup-opsi';
     ItemDetailsPage,
     ListPage,
     ProfilePage,
-    SignupOpsiPage,
     SignupPage,
     SignupalumniPage,
     MainmenuPage,
@@ -48,7 +46,6 @@ import { SignupOpsiPage } from '../pages/signup-opsi/signup-opsi';
     ItemDetailsPage,
     ListPage,
     ProfilePage,
-    SignupOpsiPage,
     SignupPage,
     SignupalumniPage,
     MainmenuPage,

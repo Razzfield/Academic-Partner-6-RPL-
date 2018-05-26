@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="anjay">
-    <ion-title>Sign Up sebagai Mahasiswa</ion-title>
+    <ion-title>Sign Up Mahasiswa</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,7 +18,7 @@
 
     <ion-item>
       <ion-label floating>Email</ion-label>
-      <ion-input [(ngModel)]="email" type="text" value=""></ion-input>
+      <ion-input [(ngModel)]="email" type="email" value=""></ion-input>
     </ion-item>
   
     <ion-item>
@@ -27,32 +27,46 @@
     </ion-item>
     
     <ion-item>
-      <ion-label floating>Nama</ion-label>
-      <ion-input [(ngModel)]="nama" type="text" value=""></ion-input>
+      <ion-label floating>Nama Lengkap</ion-label>
+      <ion-input [(ngModel)]="nama_lengkap" type="text" value=""></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-item>
+      <ion-label inline>Tanggal Lahir</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="tanggal_lahir" yearValue="1990" placeholder="Click here"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>ID Line</ion-label>
+      <ion-input [(ngModel)]="id_line" type="text" value=""></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>No HP.</ion-label>
+      <ion-input [(ngModel)]="nomor_HP" type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>NIM</ion-label>
       <ion-input [(ngModel)]="nim" type="text" value=""></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Tanggal Lahir</ion-label>
-      <ion-datetime displayFormat="DD/M/YYYY" [(ngModel)]="date" yearValue="1990"></ion-datetime>
+      <ion-label floating>Jurusan</ion-label>
+      <ion-input [(ngModel)]="jurusan" type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Fakultas</ion-label>
+      <ion-input [(ngModel)]="fakultas" type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Angkatan</ion-label>
+      <ion-input [(ngModel)]="angkatan" type="text" value=""></ion-input>
     </ion-item>
     <br>
-    <ion-list>
-      <ion-item>
-        <ion-label floating>Kategori User</ion-label>
-        <ion-select [(ngModel)]="kategori">
-          <ion-option value="alumni">Alumni</ion-option>
-          <ion-option value="mahasiswa">Mahasiswa</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
-    
-
-
     <button ion-button full (click)="showAlert();doneRegist()" color="secondary"> Create Account</button>
 
   </ion-list>
