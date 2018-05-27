@@ -26,14 +26,14 @@ export class LoginPage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       spinner: 'bubbles',
-      content: "Mohon tunggu... internet anda jelek",
-      duration: 1200
+      content: "Mohon tunggu",
+      duration: 900
     });
     loader.present();
 
     setTimeout(() => {
     this.navCtrl.setRoot(MainmenuPage);
-  }, 1260);
+  }, 960);
 }
 
 signUp() {
