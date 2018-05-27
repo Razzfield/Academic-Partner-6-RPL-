@@ -28,7 +28,7 @@
       $sql = mysqli_query($conn,"INSERT INTO user_mahasiswa (email,password,nama_lengkap,tanggal_lahir, id_line, nomor_hp, nim, jurusan, fakultas, angkatan)
       VALUES ('$email','$encrypt_password','$nama_lengkap','$tanggal_lahir','$id_line','$nomor_hp','$nim','$jurusan','$fakultas','$angkatan')");
   if($sql){
-      $getUserSql=mysqli_query($conn, "SELECT * from user_mahasiswa WHERE username='$username' AND password = '$encrypt_password'");
+      $getUserSql=mysqli_query($conn, "SELECT * from user_mahasiswa WHERE email='$email' AND password = '$encrypt_password'");
       if (mysqli_num_rows($getUserSql)) {
         $row = mysqli_fetch_assoc($getUserSql);
         $data =array(

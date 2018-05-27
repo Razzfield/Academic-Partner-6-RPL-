@@ -9,7 +9,7 @@
         $password = $request->password;
     }
     $encrypt_password = md5($password);
-    $query_login = mysqli_query($conn,"SELECT * FROM users_mahasiswa WHERE email='$email' AND password='$encrypt_password'");
+    $query_login = mysqli_query($conn,"SELECT * FROM user_mahasiswa WHERE email='$email' AND password='$encrypt_password'");
     if(mysqli_num_rows($query_login)){
         $row=mysqli_fetch_assoc($query_login);
         $data =array(

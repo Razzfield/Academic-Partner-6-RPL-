@@ -2,7 +2,7 @@
 	include 'config.php';
 
     $id = $_GET['id'];
-	$q = mysqli_query($connect,"SELECT nama,nim,jurusan,angkatan,minata FROM user_mahasiswa where id = $id");
+	$q = mysqli_query($conn,"SELECT * FROM user_mahasiswa WHERE id_mahasiswa = '$id'");
 	
 	while($result=mysqli_fetch_assoc($q)){
 		$result_set[]=$result;
