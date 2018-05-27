@@ -21,6 +21,7 @@ import { ViewmemberPage } from '../pages/viewmember/viewmember';
 import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
 import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
 import { ForumPage } from '../pages/forum/forum';
+import { JudulforumPage } from '../pages/judulforum/judulforum';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ForumPage } from '../pages/forum/forum';
     ProfilenyarekanPage,
     ViewmemberPage,
     FriendPopoverPage,
+    JudulforumPage,
     ForumPage
   ],
   imports: [
@@ -58,6 +60,7 @@ import { ForumPage } from '../pages/forum/forum';
     ProfilenyarekanPage,
     ViewmemberPage,
     FriendPopoverPage,
+    JudulforumPage,
     ForumPage
   ],
   providers: [

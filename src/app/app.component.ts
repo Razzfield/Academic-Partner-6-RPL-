@@ -11,6 +11,7 @@ import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 import { EditprofilePage } from '../pages/editprofile/editprofile';
 import { MainmenuPage } from '../pages/mainmenu/mainmenu';
 import { ForumPage } from '../pages/forum/forum';
+import { JudulforumPage } from '../pages/judulforum/judulforum';
 
 
 @Component({
@@ -37,7 +38,7 @@ export class MyApp {
       { title: 'Main Menu', component: MainmenuPage },
       { title: 'Profile', component: ProfilePage },
       { title: 'Daftar Rekan', component : SearchrekanPage},
-      { title: 'Forum Alumni', component: ForumPage },
+      { title: 'Forum Alumni', component: JudulforumPage },
       { title: 'Logout', component: LoginPage },
       
     ];
