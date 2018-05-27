@@ -1,7 +1,7 @@
 # Academic Partner
 
 Academic Partner adalah sebuah aplikasi yang bisa menghubungkan teman-teman yang ingin bekerjasama dalam kompetisi.
-Pengguna dapat mencari rekan melalui fitur search rekan, serta bekerjsama dalam meraih prestasi :).
+Pengguna dapat mencari rekan melalui fitur search rekan, serta bekerjsama dalam meraih prestasi :). Alumni juga dapat berkontribusi kepada pengembangan skill para penerusnya dengan membimbing mereka melalui Forum Alumni.
 
 Kelompok 6 RPL :
 
