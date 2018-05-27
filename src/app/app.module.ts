@@ -20,6 +20,7 @@ import { ProfilenyarekanPage } from '../pages/profilenyarekan/profilenyarekan';
 import { ViewmemberPage } from '../pages/viewmember/viewmember';
 import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
 import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
+import { ForumPage } from '../pages/forum/forum';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
     SearchrekanPage,
     ProfilenyarekanPage,
     ViewmemberPage,
-    FriendPopoverPage
+    FriendPopoverPage,
+    ForumPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
     SearchrekanPage,
     ProfilenyarekanPage,
     ViewmemberPage,
-    FriendPopoverPage
+    FriendPopoverPage,
+    ForumPage
   ],
   providers: [
     StatusBar,
