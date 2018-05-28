@@ -22,6 +22,7 @@ import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
 import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
 import { ForumPage } from '../pages/forum/forum';
 import { JudulforumPage } from '../pages/judulforum/judulforum';
+import { NewThreadsPage } from '../pages/new-threads/new-threads';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { JudulforumPage } from '../pages/judulforum/judulforum';
     ViewmemberPage,
     FriendPopoverPage,
     JudulforumPage,
-    ForumPage
+    ForumPage,
+    NewThreadsPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { JudulforumPage } from '../pages/judulforum/judulforum';
     ViewmemberPage,
     FriendPopoverPage,
     JudulforumPage,
-    ForumPage
+    ForumPage,
+    NewThreadsPage
   ],
   providers: [
     StatusBar,

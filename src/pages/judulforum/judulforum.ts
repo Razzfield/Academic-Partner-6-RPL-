@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ForumPage } from '../forum/forum';
+import { NewThreadsPage } from '../new-threads/new-threads';
 
 @Component({
   selector: 'page-judulforum',
@@ -17,5 +18,8 @@ export class JudulforumPage {
 
   view(){
     this.navCtrl.push(ForumPage);
+  }
+  addthread(){
+    this.navCtrl.push(NewThreadsPage);
   }
 }

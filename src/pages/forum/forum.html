@@ -19,7 +19,7 @@
 <ion-content padding>
   <ion-card>
     <ion-item>
-        <button ion-button color="danger" clear icon-only float-right>
+        <button ion-button color="danger" clear icon-only float-right (click)="deleteThread()">
             <ion-icon name='trash' is-active="false"></ion-icon>
         </button>
         
@@ -36,9 +36,9 @@
   <ion-row>
     <ion-col></ion-col>
     <ion-col item end>
-      <button ion-button color="primary" clear small icon-start>
+      <button ion-button color="primary" clear small icon-start (click)="tambahKomentar()">
         <ion-icon name='text'></ion-icon>
-        Comments
+        Komentar
       </button>
     </ion-col>
   </ion-row>

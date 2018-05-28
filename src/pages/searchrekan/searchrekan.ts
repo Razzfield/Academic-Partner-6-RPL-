@@ -43,7 +43,7 @@ export class SearchrekanPage {
 
 iseng() {
   let alert = this.alertCtrl.create({
-    subTitle: 'Gak mau',
+    subTitle: 'Maaf, fitur ini belum tersedia.',
     buttons: ['yah..']
   });
   alert.present();
