@@ -16,7 +16,7 @@ export class ForumPage {
 
   deleteThread(){ 
     let confirm = this.alertCtrl.create({
-    title: 'Tunggu dulu..',
+    title: 'Konfirmasi Penghapusan',
     message: 'Apakah anda yakin ingin menghapus thread ini?',
     buttons: [
       {

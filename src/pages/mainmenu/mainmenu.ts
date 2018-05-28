@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { ViewmemberPage } from '../viewmember/viewmember';
 import { FriendPopoverPage } from '../friend-popover/friend-popover';
+import { CreateTeamPage } from '../create-team/create-team';
 
 @Component({
   selector: 'page-mainmenu',
@@ -25,6 +26,9 @@ export class MainmenuPage {
     popover.present({
       ev: myEvent
     });
+  }
+  createTeam(){
+    this.navCtrl.push(CreateTeamPage);
   }
 }
 

@@ -23,6 +23,7 @@ import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
 import { ForumPage } from '../pages/forum/forum';
 import { JudulforumPage } from '../pages/judulforum/judulforum';
 import { NewThreadsPage } from '../pages/new-threads/new-threads';
+import { CreateTeamPage } from '../pages/create-team/create-team';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NewThreadsPage } from '../pages/new-threads/new-threads';
     FriendPopoverPage,
     JudulforumPage,
     ForumPage,
-    NewThreadsPage
+    NewThreadsPage,
+    CreateTeamPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { NewThreadsPage } from '../pages/new-threads/new-threads';
     FriendPopoverPage,
     JudulforumPage,
     ForumPage,
-    NewThreadsPage
+    NewThreadsPage,
+    CreateTeamPage
   ],
   providers: [
     StatusBar,

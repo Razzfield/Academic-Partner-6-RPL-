@@ -18,8 +18,10 @@
           Mentor
         </ion-list-header>
         <ion-item>Bang Asprak</ion-item>
-    
-
+        <button ion-button color="secondary" block (click)="presentLoading()" style="margin-top: 10%;" text-justify>
+          Tambah Mentor
+        </button>
+        
   <ion-list>
     <ion-list-header>
     Anggota
@@ -29,4 +31,7 @@
     <ion-item>Ivan</ion-item>
     <ion-item>Sule</ion-item>
   </ion-list>
+  <button ion-button block (click)="presentLoading()" style="margin-top: 10%;" text-justify>
+    Tambah Anggota
+  </button>
 </ion-content>
