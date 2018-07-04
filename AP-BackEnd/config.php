@@ -12,11 +12,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
         header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
     exit(0);
 }
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "academic-partner";
-/// Create connection
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $db = "academic-partner";
+// Create connection
+
+$servername="fdb21.atspace.me";
+$username="2716343_academicpartner";
+$password="A87655678";
+$db="2716343_academicpartner";
+
 $conn = mysqli_connect($servername, $username, $password, $db);
 // Check connection
 if (!$conn) {
