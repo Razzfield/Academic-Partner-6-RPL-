@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, AlertController } from 'ionic-angular';
+import { NavController, LoadingController, AlertController, NavParams } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { MainmenuPage } from '../mainmenu/mainmenu';
 import { SignupalumniPage } from '../signupalumni/signupalumni';
@@ -13,28 +13,105 @@ export class LoginPage {
   testRadioOpen: boolean;
   testRadioResult;
 
-  username : string;
-  password : string;
+  email : any;
+  password : any;
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public loadingCtrl: LoadingController, 
+    public alertCtrl: AlertController
+    //private data: Data,
+    //public http : Http
+  ) {
+
   }
 
- 
-   
-  
+  /* signInMhs() {
+    if(this.email && this.password) {
+    let loading = this.loadingCtrl.create({
+      spinner: 'bubbles',
+      content: "Mohon tunggu",
+      duration: 900
+    });
+    
+    loading.present();
 
-  presentLoading() {
+      //apiPost
+      let input = {
+        email: this.email, 
+        password: this.password
+      };
+      console.log(input);
+      this.http.post(this.data.BASE_URL+"/Login_Mahasiswa.php",input).subscribe(data => {
+      let response = data.json();
+      console.log(response); 
+      if(response.status==200){    
+        this.data.logout();
+        
+        this.data.login(response.data,"user");//ke lokal <-- ini masih gatau benernya gimana
+        
+        this.navCtrl.setRoot(MainmenuPage);
+        loading.dismiss();
+      }
+      else {
+        loading.dismiss();
+          let alert = this.alertCtrl.create({
+            title: 'Login Gagal',      
+            message : 'Email dan password anda tidak cocok atau belum terdaftar.',
+            buttons: ['OK']
+          });
+          alert.present();
+          
+      }    
+      });
+      //apiPost    
+    }
+  }
+
+  signInAlmn() {
+    if(this.email && this.password) {
     let loader = this.loadingCtrl.create({
       spinner: 'bubbles',
       content: "Mohon tunggu",
       duration: 900
     });
+    
     loader.present();
 
-    setTimeout(() => {
-    this.navCtrl.setRoot(MainmenuPage);
-  }, 960);
-}
+      //apiPost
+      let input = {
+        email: this.email, 
+        password: this.password
+      };
+      console.log(input);
+      this.http.post(this.data.BASE_URL+"/Login_Alumni.php",input).subscribe(data => {
+      let response = data.json();
+      console.log(response); 
+      if(response.status==200){    
+        this.data.logout();
+        
+        this.data.login(response.data,"user");//ke lokal <-- ini juga
+        
+        this.navCtrl.setRoot(MainmenuPage);
+        loading.dismiss();
+      }
+      else {
+        loading.dismiss();
+          let alert = this.alertCtrl.create({
+            title: 'Login Gagal',      
+            message : 'Email dan password anda tidak cocok atau belum terdaftar.',
+            buttons: ['OK']
+          });
+          alert.present();
+          
+      }    
+      });
+      //apiPost    
+    }
+  }
+
+  */
 
 signUp() {
   let alert = this.alertCtrl.create();
