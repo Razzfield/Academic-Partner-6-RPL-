@@ -22,15 +22,18 @@
 
 
 <ion-content padding>
-    <ion-card>
+
+    <ion-label text-center *ngIf="!group">Whoops. Anda belum punya team.</ion-label>
+    <ion-item *ngFor="let group of groups">
+     <ion-card>
         <ion-card-content>
           <ion-card-title text-center color="anjay3">
-            Team JagungBakar
+            Team JagungBakar <!-- harusnya Team {{ nama team }} -->
             </ion-card-title>
           <p>
-            Competition: Compfest XI<br>
-            Due Date: 27 August 2019<br>
-            Location: Jakarta, ID<br>
+            Competition: Compfest XI<br> <!-- harusnya {{ nama comp }} -->
+            Due Date: 27 August 2019<br> <!-- harusnya {{ due date }} -->
+            Location: Jakarta, ID<br> <!-- harusnya {{ lokasi }} -->
           </p>
         </ion-card-content>
 
@@ -42,8 +45,10 @@
               </button>
             </ion-col>
           </ion-row>
-    </ion-card>
+     </ion-card>
+    </ion-item>
 
+    <!-- hanya dummy -->
     <ion-card>
         <ion-card-content>
           <ion-card-title text-center color="anjay3">
@@ -65,8 +70,9 @@
             </ion-col>
           </ion-row>
     </ion-card>
+
     <button ion-button block (click)="createTeam()" style="margin-top: 10%;" text-justify color="secondary">
       <ion-icon name="add-circle"></ion-icon>
-      &nbsp; Buat grup baru
+      &nbsp; Buat team baru
     </button>
 </ion-content>
