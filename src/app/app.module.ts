@@ -18,7 +18,6 @@ import { EditprofilePage } from '../pages/editprofile/editprofile';
 import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
 import { ProfilenyarekanPage } from '../pages/profilenyarekan/profilenyarekan';
 import { ViewmemberPage } from '../pages/viewmember/viewmember';
-import { SignupalumniPage } from '../pages/signupalumni/signupalumni';
 import { FriendPopoverPage } from '../pages/friend-popover/friend-popover';
 import { ForumPage } from '../pages/forum/forum';
 import { JudulforumPage } from '../pages/judulforum/judulforum';
@@ -36,7 +35,6 @@ import { Data } from '../provider/data';
     ListPage,
     ProfilePage,
     SignupPage,
-    SignupalumniPage,
     MainmenuPage,
     EditprofilePage,
     SearchrekanPage,
@@ -61,7 +59,6 @@ import { Data } from '../provider/data';
     ListPage,
     ProfilePage,
     SignupPage,
-    SignupalumniPage,
     MainmenuPage,
     EditprofilePage,
     SearchrekanPage,
