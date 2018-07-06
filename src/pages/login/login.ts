@@ -28,7 +28,7 @@ export class LoginPage {
 
   presentLoading() {
         let loader = this.loadingCtrl.create({
-          content: "Mohon tunggu... internet anda jelek",
+          content: "Mohon tunggu",
           duration: 600
         });
         loader.present();
