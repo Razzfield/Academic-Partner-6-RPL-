@@ -27,6 +27,18 @@ export class LoginPage {
 
   }
 
+  presentLoading() {
+        let loader = this.loadingCtrl.create({
+          content: "Mohon tunggu... internet anda jelek",
+          duration: 600
+        });
+        loader.present();
+    
+        setTimeout(() => {
+        this.navCtrl.setRoot(MainmenuPage);
+      
+      }, 660);
+    }
   /* signInMhs() {
     if(this.email && this.password) {
     let loading = this.loadingCtrl.create({
