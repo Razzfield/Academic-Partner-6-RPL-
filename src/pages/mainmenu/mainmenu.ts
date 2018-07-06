@@ -24,17 +24,16 @@ export class MainmenuPage {
     public http : Http
     ) {
       this.menuCtrl.enable(true);
+      this.data.getData().then((data)=>
+      {
+        console.log(data);
+        this.userData =  data;
+        this.nama = data.nama_lengkap;
+        this.nim = data.nim;
+      })
+    }
+  
      
-  }
-  ionViewWillEnter(){
-     this.data.getData().then((data)=>
-    {
-      console.log(data);
-      this.userData =  data;
-      this.nama = data.nama_lengkap;
-      this.nim = data.nim;
-    })
-  }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainmenuPage');

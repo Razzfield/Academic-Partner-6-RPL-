@@ -60,13 +60,7 @@ export class MyApp {
     //Session
     this.data.isLogin().then((value)=>{
       if(value){
-        this.rootPage = LoginPage;
-        
-      } else {
-         this.rootPage = MainmenuPage;
-      }    
-    });
-    //set
+        //set
     this.data.getData().then((data)=>
     {
       console.log(data);
@@ -74,6 +68,13 @@ export class MyApp {
       this.name = data.nama_lengkap;
       this.nim = data.nim;
     })
+        this.rootPage = LoginPage;
+        
+      } else {
+         this.rootPage = MainmenuPage;
+      }    
+    });
+    
     
     
   }
@@ -100,9 +101,10 @@ export class MyApp {
             text: 'Iya',
             
             handler: () => {
-              this.nav.setRoot(page.component);   
-              console.log('Yes clicked');
               this.data.logout();
+              this.nav.setRoot(LoginPage);   
+              console.log('Yes clicked');
+              
             }
           }
         ]

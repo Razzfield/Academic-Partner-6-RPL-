@@ -14,8 +14,7 @@
     $jurusan="";
     $fakultas="";
     $angkatan="";
-    $minat="";
-    $id_mahasiswa = $_GET['id'];
+
     if (isset($postdata)) {
           $request = json_decode($postdata);
           $password = $request->password;
@@ -29,7 +28,6 @@
           $jurusan = $request->jurusan;
           $fakultas = $request->fakultas;
           $angkatan = $request->angkatan;
-          $minat = $request->minat;
     }
     $encrypt_password = md5($password);
     $enc_newpass = md5($newpassword);

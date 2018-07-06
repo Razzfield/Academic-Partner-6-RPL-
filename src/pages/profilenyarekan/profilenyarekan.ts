@@ -17,4 +17,8 @@ export class ProfilenyarekanPage {
   closeModal(){
     this.navCtrl.pop();
   }
+
+  chatNow(){
+    window.open("http://line.me/ti/p/~razzfiled", '_system');
+  }
 }

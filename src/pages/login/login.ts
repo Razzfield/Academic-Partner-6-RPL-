@@ -49,7 +49,6 @@ export class LoginPage {
       let response = data.json();
       console.log(response); 
       if(response.status==200){    
-        this.data.logout();
         
         this.data.login(response.data,"user");//ke lokal <-- ini masih gatau benernya gimana
         

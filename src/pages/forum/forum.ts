@@ -39,6 +39,10 @@ export class ForumPage {
   confirm.present();
 }
   tambahKomentar(){
-    let a
+    let alert = this.alertCtrl.create({
+      subTitle: 'Maaf, fitur ini belum tersedia.',
+      buttons: ['yah..']
+    });
+    alert.present();
   }
 }
