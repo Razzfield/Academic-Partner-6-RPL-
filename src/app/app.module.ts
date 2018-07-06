@@ -24,6 +24,9 @@ import { ForumPage } from '../pages/forum/forum';
 import { JudulforumPage } from '../pages/judulforum/judulforum';
 import { NewThreadsPage } from '../pages/new-threads/new-threads';
 import { CreateTeamPage } from '../pages/create-team/create-team';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
+import { Data } from '../provider/data';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,7 @@ import { CreateTeamPage } from '../pages/create-team/create-team';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -72,7 +76,8 @@ import { CreateTeamPage } from '../pages/create-team/create-team';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Data
   ]
 })
 export class AppModule {}

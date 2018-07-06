@@ -1,11 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
+
 import { Platform, MenuController, Nav, AlertController } from 'ionic-angular';
+import { ListPage } from '../pages/list/list';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
 import { SearchrekanPage } from '../pages/searchrekan/searchrekan';
+import { EditprofilePage } from '../pages/editprofile/editprofile';
 import { MainmenuPage } from '../pages/mainmenu/mainmenu';
+import { ForumPage } from '../pages/forum/forum';
 import { JudulforumPage } from '../pages/judulforum/judulforum';
 
 
@@ -31,6 +36,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Main Menu', component: MainmenuPage },
+      { title: 'Profile', component: ProfilePage },
       { title: 'Daftar Rekan', component : SearchrekanPage},
       { title: 'Forum', component: JudulforumPage },
       { title: 'Logout', component: LoginPage },
@@ -46,6 +52,9 @@ export class MyApp {
       this.splashScreen.hide();
     });
   }
+
+  //Session
+
 
   openPage(page) {
     // close the menu when clicking a link from the menu
@@ -82,7 +91,7 @@ export class MyApp {
   editProfile(){
     
     this.menu.close();
-    this.nav.push(ProfilePage);
+    this.nav.push(EditprofilePage);
   }
   
 }
