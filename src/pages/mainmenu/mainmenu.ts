@@ -25,34 +25,6 @@ export class MainmenuPage {
     console.log('ionViewDidLoad MainmenuPage');
   }
 
-  /* getGroup(){
-    //apiGet
-      this.http.get(this.data.BASE_URL+"/todo_read.php?id_user="+this.id_user<--tolong sesuaikan will wkwk).subscribe(data => {
-      let response = data.json();
-      console.log(response);
-      if(response.status==200){
-        this.groups = response.data;
-        group = true;
-      }
-      else {
-        Alert("No Data");
-        group = false;
-      }
-    });
-    //apiGet  
-  } */
 
-  lihat(){
-    this.navCtrl.push(ViewmemberPage);
-  }
   
-  presentPopover(myEvent) {
-    let popover = this.popoverCtrl.create(FriendPopoverPage);
-    popover.present({
-      ev: myEvent
-    });
-  }
-  createTeam(){
-    this.navCtrl.push(CreateTeamPage);
-  }
 }

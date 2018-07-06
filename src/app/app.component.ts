@@ -36,9 +36,8 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Main Menu', component: MainmenuPage },
-      { title: 'Profile', component: ProfilePage },
       { title: 'Daftar Rekan', component : SearchrekanPage},
-      { title: 'Forum', component: JudulforumPage },
+      { title: 'Halaman Diskusi', component: JudulforumPage },
       { title: 'Logout', component: LoginPage },
       
     ];
@@ -91,7 +90,7 @@ export class MyApp {
   editProfile(){
     
     this.menu.close();
-    this.nav.push(EditprofilePage);
+    this.nav.push(ProfilePage);
   }
   
 }
