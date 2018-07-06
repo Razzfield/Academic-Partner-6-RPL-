@@ -22,30 +22,45 @@
           
         
         <img class="profile-image" src="assets/imgs/logo.png">
-          <h4>Ivan Mahinza</h4>
-          <h5>G64160066</h5>
+          <h4>{{nama}}</h4>
+          <h5>{{nim}}</h5>
       </div>
   <ion-list>
       <ion-item>
-        <ion-label floating>Departemen</ion-label>
-        <ion-label style="text-align: right"> Ilmu Komputer</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Angkatan</ion-label>
-        <ion-label style="text-align: right">53</ion-label>
-      </ion-item>
-      <ion-item>
           <ion-label floating>Tanggal Lahir</ion-label>
-          <ion-label style="text-align: right">02-04-1999</ion-label>
+          <ion-label style="text-align: right">{{tanggal_lahir}}</ion-label>
       </ion-item>
+
       <ion-item>
-            <ion-label floating>Minat Lomba</ion-label>
-            <ion-label style="text-align: right"> Gaming, PKM-KC</ion-label>
+          <ion-label floating>Fakultas</ion-label>
+          <ion-label style="text-align: right"> {{fakultas}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Jurusan</ion-label>
+        <ion-label style="text-align: right"> {{jurusan}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label inline>Angkatan</ion-label>
+        <ion-label style="text-align: right"> {{angkatan}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>Email</ion-label><br>
+          <ion-label style="text-align: right"> {{email}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+            <ion-label inline>No. HP</ion-label>
+            <ion-label style="text-align: right"> {{nomor_hp}}</ion-label>
        </ion-item>
+
        <ion-item>
         <ion-label floating>ID Line</ion-label>
-        <ion-label style="text-align: right">zevalian</ion-label>
+        <ion-label style="text-align: right">{{id_line}}</ion-label>
       </ion-item>
+
   </ion-list>
 </form>
 <button block color="secondary" ion-button outline (click)="findPartner()">Daftar Rekan Anda</button>

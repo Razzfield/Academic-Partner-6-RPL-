@@ -42,8 +42,7 @@ export class SignupPage {
   }
 
   check(){
-    if(this.email === '' || this.password === '' || this.nama_lengkap === '' || this.tanggal_lahir === '' ||
-      this.id_line === '' || this.nomor_hp === '' || this.nim === '' || this.jurusan === '' || this.fakultas === '' || this.angkatan){
+    if(this.email === '' || this.password === '' || this.nama_lengkap === '' || this.id_line === '' || this.nomor_hp === '' || this.nim === '' || this.jurusan === '' || this.fakultas === '' || this.angkatan === ''){
       let alert = this.alertCtrl.create({
         title: 'Silahkan isi dengan lengkap',
         buttons: ['OK']

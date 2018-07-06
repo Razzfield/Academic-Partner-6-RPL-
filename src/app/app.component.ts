@@ -22,7 +22,10 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage :any;
   pages: Array<{title: string, component: any}>;
-  
+
+  userData: any;
+  name: any;
+  nim: any;
 
   constructor(
     public platform: Platform,
@@ -32,6 +35,9 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public alertCtrl: AlertController
   ) {
+
+    
+
     this.initializeApp();
 
     // set our app's pages
@@ -55,12 +61,23 @@ export class MyApp {
     this.data.isLogin().then((value)=>{
       if(value){
         this.rootPage = LoginPage;
+        
       } else {
          this.rootPage = MainmenuPage;
       }    
     });
-    //Session
+    //set
+    this.data.getData().then((data)=>
+    {
+      console.log(data);
+      this.userData = data;
+      this.name = data.nama_lengkap;
+      this.nim = data.nim;
+    })
+    
+    
   }
+  
 
 
   openPage(page) {
@@ -85,6 +102,7 @@ export class MyApp {
             handler: () => {
               this.nav.setRoot(page.component);   
               console.log('Yes clicked');
+              this.data.logout();
             }
           }
         ]

@@ -17,17 +17,26 @@
     <form #formCtrl="ngForm">
         
     <ion-list>
+            <ion-item>
+                    <ion-label floating>Old Password</ion-label>
+                    <ion-input [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>
+                  </ion-item>    
         <ion-item>
+                <ion-item>
+                        <ion-label floating>New Password</ion-label>
+                        <ion-input [(ngModel)]="newpassword" [ngModelOptions]="{standalone: true}"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                            <ion-label floating>Retype New Password</ion-label>
+                            <ion-input [(ngModel)]="confirmpassword" [ngModelOptions]="{standalone: true}"></ion-input>
+                          </ion-item>        
             <ion-label floating>Email</ion-label>
-            <ion-input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required></ion-input>
+            <ion-input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" ></ion-input>
           </ion-item>
-          <ion-item>
-              <ion-label floating>password</ion-label>
-              <ion-input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required></ion-input>
-            </ion-item>    
+          
         <ion-item>
           <ion-label floating>Nama Lengkap</ion-label>
-          <ion-input [(ngModel)]="nama_lengkap" [ngModelOptions]="{standalone: true}" required></ion-input>
+          <ion-input [(ngModel)]="nama_lengkap" [ngModelOptions]="{standalone: true}" ></ion-input>
         </ion-item>
         <br>
         <ion-item>
@@ -36,31 +45,31 @@
         </ion-item>
         <ion-item>
             <ion-label floating>ID Line</ion-label>
-            <ion-input [(ngModel)]="id_line" [ngModelOptions]="{standalone: true}" required></ion-input>
+            <ion-input [(ngModel)]="id_line" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Nomor HP</ion-label>
-            <ion-input [(ngModel)]="nomor_hp" [ngModelOptions]="{standalone: true}" required></ion-input>
+            <ion-input [(ngModel)]="nomor_hp" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>NIM</ion-label>
-            <ion-input [(ngModel)]="nim" [ngModelOptions]="{standalone: true}" required></ion-input>
+            <ion-input [(ngModel)]="nim" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Jurusan</ion-label>
-            <ion-input [(ngModel)]="jurusan" [ngModelOptions]="{standalone: true}" required></ion-input>
+            <ion-input [(ngModel)]="jurusan" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Fakultas</ion-label>
-            <ion-input [(ngModel)]="fakultas" [ngModelOptions]="{standalone: true}" required></ion-input>
+            <ion-input [(ngModel)]="fakultas" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Angkatan</ion-label>
-            <ion-input [(ngModel)]="angkatan" [ngModelOptions]="{standalone: true}" required></ion-input>
+            <ion-input [(ngModel)]="angkatan" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Minat</ion-label>
-            <ion-input [(ngModel)]="minat" [ngModelOptions]="{standalone: true}" required>
+            <ion-input [(ngModel)]="minat" [ngModelOptions]="{standalone: true}">
             </ion-input>
           </ion-item>
         

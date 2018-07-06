@@ -1,6 +1,6 @@
 import { SignupPage } from './../signup/signup';
 import { Component } from '@angular/core';
-import { NavController, LoadingController, AlertController, NavParams } from 'ionic-angular';
+import { NavController, LoadingController, AlertController, NavParams, MenuController } from 'ionic-angular';
 import { MainmenuPage } from '../mainmenu/mainmenu';
 import { Data } from '../../provider/data';
 import { Http } from '@angular/http';
@@ -22,10 +22,11 @@ export class LoginPage {
     public navParams: NavParams,
     public loadingCtrl: LoadingController, 
     public alertCtrl: AlertController,
+    public menuCtrl: MenuController,
     private data: Data,
     public http : Http
   ) {
-
+    this.menuCtrl.enable(false);
 
   }
 
@@ -34,8 +35,7 @@ export class LoginPage {
     if(this.email && this.password) {
     let loading = this.loadingCtrl.create({
       spinner: 'bubbles',
-      content: "Mohon tunggu",
-      duration: 600
+      content: "Mohon tunggu"
     });
     
     loading.present();
@@ -45,7 +45,6 @@ export class LoginPage {
         email: this.email, 
         password: this.password
       };
-      console.log(input);
       this.http.post(this.data.BASE_URL+"/Login_Mahasiswa.php",input).subscribe(data => {
       let response = data.json();
       console.log(response); 
