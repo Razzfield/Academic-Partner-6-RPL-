@@ -10,8 +10,7 @@ import { Http } from '@angular/http';
 })
 export class SignupPage {
 
-  regexpmail = new RegExp(/^[A-Za-z0-9._%+-]+@apps.ipb.ac.id$/);
-  regexpnama = new RegExp(/^\w.{1,23}$/);
+  
   email:any;
   password:any;
   nama_lengkap:any;
@@ -22,7 +21,9 @@ export class SignupPage {
   jurusan:any;
   fakultas:any;
   angkatan:any;
-
+  regexpmail = new RegExp(/^[A-Za-z0-9._%+-]+@apps.ipb.ac.id$/);
+  regexpnama = new RegExp(/^\w.{1,23}$/);
+  
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -43,32 +44,29 @@ export class SignupPage {
   check(){
     if(this.email === '' || this.password === '' || this.nama_lengkap === '' || this.tanggal_lahir === '' ||
       this.id_line === '' || this.nomor_hp === '' || this.nim === '' || this.jurusan === '' || this.fakultas === '' || this.angkatan){
-      let toast = this.toastCtrl.create({
-        message: 'Silahkan isi dengan lengkap',
-        duration: 1500,
-        position: 'bottom'
+      let alert = this.alertCtrl.create({
+        title: 'Silahkan isi dengan lengkap',
+        buttons: ['OK']
       });
-      toast.present();
+      alert.present();
     } else if(this.regexpnama.test(this.nama_lengkap) == false) {
-       let toast = this.toastCtrl.create({
-        message: 'Nama min. 2 karakter dan max. 24 karakter',
-        duration: 1500,
-        position: 'bottom'
+       let alert = this.alertCtrl.create({
+        title: 'Nama min. 2 karakter dan max. 24 karakter',
+        buttons: ['OK']
       }); 
-      toast.present();
+      alert.present();
     } else if(this.regexpmail.test(this.email) == false) {
-      let toast = this.toastCtrl.create({
-        message: 'Hanya email @apps.ipb.ac.id yang diperbolehkan',
-        duration: 1500,
-        position: 'bottom'
+      let alert = this.alertCtrl.create({
+        title: 'Hanya email @apps.ipb.ac.id yang diperbolehkan',
+        buttons: ['OK']
       });
-      toast.present();
+      alert.present();
     }else{
       this.signUp();
     }
   }
   signUp(){
-
+    if(1) {
       let loading = this.loadCtrl.create({
         content: 'Mohon Tunggu'
       });
@@ -113,4 +111,4 @@ export class SignupPage {
         //apiPost  
       }
     }
-  
+}
