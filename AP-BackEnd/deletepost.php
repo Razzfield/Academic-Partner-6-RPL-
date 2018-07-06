@@ -1,7 +1,7 @@
 <?php
     include 'config.php';
 
-    $id = $_GET['id'];
+    $idp = $_GET['id'];
     $query_cek = mysqli_query($conn, "SELECT * FROM forum where id='$id'");
 
     if($query_cek) {

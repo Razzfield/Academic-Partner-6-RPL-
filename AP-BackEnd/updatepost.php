@@ -2,10 +2,11 @@
   include 'config.php';
     $postdata = file_get_contents("php://input");
     $post="";
-    $idp = $_GET['id'];
+    $idp ="";
     if (isset($postdata)) {
         $request = json_decode($postdata);
         $post = $request->post;
+        $idp = $request->idp;
     }
     $query_vali = mysqli_query($conn, "SELECT * FROM forum where id='$idp'");
     if($query_vali) {

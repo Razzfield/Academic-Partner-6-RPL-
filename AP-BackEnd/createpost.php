@@ -2,16 +2,14 @@
   include 'config.php';
     $postdata = file_get_contents("php://input");
     $judul="";
-    $kategori="";
     $post="";
     if (isset($postdata)) {
         $request = json_decode($postdata);
         $judul = $request->judul;
-        $kategori = $request->kategori;
         $post = $request->post;
     }
     
-    $querypost = mysqli_query($conn,"INSERT INTO forum (judul,kategori,post) VALUES('$judul','$kategori','$post')");
+    $querypost = mysqli_query($conn,"INSERT INTO forum (judul,post) VALUES('$judul','$post')");
     if($querypost)
     $getquerypost=mysqli_query($conn, "SELECT * from forum");
     if(mysqli_num_rows($getquerypost)){

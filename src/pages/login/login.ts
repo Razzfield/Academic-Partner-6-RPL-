@@ -12,7 +12,7 @@ export class LoginPage {
   testRadioOpen: boolean;
   testRadioResult;
 
-  email : any;
+  nim : any;
   password : any;
 
   constructor(
