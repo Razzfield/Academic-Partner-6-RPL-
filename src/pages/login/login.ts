@@ -12,7 +12,7 @@ export class LoginPage {
   testRadioOpen: boolean;
   testRadioResult;
 
-  nim : any;
+  email : any;
   password : any;
 
   constructor(
@@ -39,7 +39,7 @@ export class LoginPage {
       }, 660);
     }
   /* signInMhs() {
-    if(this.email && this.password) {
+    if(this.nim && this.password) {
     let loading = this.loadingCtrl.create({
       spinner: 'bubbles',
       content: "Mohon tunggu",
