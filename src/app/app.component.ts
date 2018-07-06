@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { Platform, MenuController, Nav, AlertController } from 'ionic-angular';
-import { ListPage } from '../pages/list/list';
+import {  Platform, MenuController, Nav, AlertController } from 'ionic-angular';
+import { Data } from '../provider/data';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,20 +14,21 @@ import { ForumPage } from '../pages/forum/forum';
 import { JudulforumPage } from '../pages/judulforum/judulforum';
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
-  // make LoginPage the root (or first) page
-  rootPage = LoginPage;
+  rootPage :any;
   pages: Array<{title: string, component: any}>;
+  
 
   constructor(
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
+    public data: Data,
     public splashScreen: SplashScreen,
     public alertCtrl: AlertController
   ) {
@@ -50,9 +51,16 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+    //Session
+    this.data.isLogin().then((value)=>{
+      if(value){
+        this.rootPage = LoginPage;
+      } else {
+         this.rootPage = MainmenuPage;
+      }    
+    });
+    //Session
   }
-
-  //Session
 
 
   openPage(page) {

@@ -5,7 +5,7 @@ import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class Data {
-  public BASE_URL = 'http://todoapi.atspace.cc';
+  public BASE_URL = 'http://projekrpl6.atspace.co.uk';
 
   public HAS_LOGGED_IN = 'status_login';
   

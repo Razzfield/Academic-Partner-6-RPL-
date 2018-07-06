@@ -18,7 +18,7 @@
 
     <ion-item>
       <ion-label floating>Email</ion-label>
-      <ion-input [(ngModel)]="email" type="email" value=""></ion-input>
+      <ion-input [(ngModel)]="email" type="email"></ion-input>
     </ion-item>
   
     <ion-item>
@@ -67,7 +67,7 @@
       <ion-input [(ngModel)]="angkatan" type="text" value=""></ion-input>
     </ion-item>
     <br>
-    <button ion-button full (click)="showAlert()" color="secondary"> Create Account</button>
+    <button ion-button full (click)="signUp()" color="secondary"> Create Account</button>
 
   </ion-list>
 </ion-content>
